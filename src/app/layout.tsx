@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { cn } from '../lib/utils';
+import { cn } from "../lib/utils";
 import { bungee, changa } from "../lib/fonts";
 import "./globals.css";
+import Layout from "./components/layout-head-foot";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,13 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <body  className={cn(
+    <html lang="en">
+      <body
+        className={cn(
           bungee.variable,
           changa.variable,
           changa.className,
-          'font-normal antialiased bg-shade-dark',
-        )}>{children}</body>
+          "font-normal antialiased"
+        )}
+      >
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

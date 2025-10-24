@@ -1,7 +1,9 @@
+'use client';
 import React, { ComponentType, SVGProps } from "react";
 import Heading from "@/components/typography/heading";
 import Body from "@/components/typography/body";
-import { PlayCircle, ArrowRight } from "lucide-react";
+import { PlayCircle} from "lucide-react";
+import Link from "next/link";
 
 interface impactStatsProps {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
@@ -16,8 +18,7 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
       <div className="container mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-
-            <Heading  className="leading-tight text-[48px] sm:text-[60px]">
+            <Heading className="leading-tight text-[48px] sm:text-[60px]">
               <span className="bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Masa Depan
               </span>
@@ -38,18 +39,14 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
               ekonomis, dan berkelanjutan.
             </Body>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center">
-                <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                <Body size="lg" weight="semibold" className="text-white">
-                  Mulai Belajar Sekarang
-                </Body>
-              </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full hover:border-blue-500 hover:text-blue-500 transition-all flex items-center justify-center">
-                <Body size="lg" weight="semibold" className="text-current">
-                  Lihat Materi
-                </Body>
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
+              <Link href="/course">
+                <div className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center">
+                  <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  <Body size="lg" weight="semibold" className="text-white">
+                    Mulai Belajar Sekarang
+                  </Body>
+                </div>
+              </Link>
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               {impactStats.map((stat, index) => (

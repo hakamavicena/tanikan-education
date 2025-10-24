@@ -10,9 +10,6 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Fish className="w-5 h-5 text-white" />
-              </div>
               <Heading size="xs" className="text-white">
                 Tanikan Education
               </Heading>
@@ -26,7 +23,7 @@ const Footer = () => {
               Navigasi
             </Heading>
             <div className="space-y-2">
-              {["Home", "Tentang", "Materi", "Modul"].map((item) => (
+              {["Home", "Tentang", "Materi", "Dampak"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -69,7 +66,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-800 pt-8 text-center">
           <Body size="md" className="text-gray-400">
-            &copy; 2024 Tanikan Education. Semua Hak Dilindungi.
+            &copy; 2025 Tanikan Education. Semua Hak Dilindungi.
             <span className="text-green-400 ml-2">🌱 Sustainable Future</span>
           </Body>
         </div>

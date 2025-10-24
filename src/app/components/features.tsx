@@ -49,8 +49,7 @@ const Features = ({ features }:{features:FeaturesProps[]}) => {
                   >
                     {feature.stats}
                   </Body>
-                  <ArrowRight className="w-5 h-5 text-blue-500 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </div>  
               </div>
             </div>
           ))}

@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "@/components/typography/heading";
 import Body from "@/components/typography/body";
 import { Target, Globe, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 const Impact = () => {
   return (
@@ -57,12 +58,16 @@ const Impact = () => {
             </Body>
           </div>
         </div>
-        <div className="text-center">
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105">
-            <Body size="lg" weight="semibold" className="text-blue-600">
-              Bergabung dengan Gerakan Kami
-            </Body>
-          </button>
+        <div className="flex flex-row justify-center">
+          <div className="text-center ">
+            <Link href="">
+              <div className="bg-white text-blue-600 px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105  ">
+                <Body size="lg" weight="semibold" className="text-blue-600">
+                  Bergabung dengan Gerakan Kami
+                </Body>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
