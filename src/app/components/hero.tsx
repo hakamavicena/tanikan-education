@@ -18,7 +18,7 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
       <div className="container mx-auto px-6 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <Heading className="leading-tight text-[48px] sm:text-[60px]">
+            <Heading className="leading-tight text-[42px] md:text-[60px]">
               <span className="bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                 Masa Depan
               </span>
@@ -30,17 +30,16 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
               </span>
             </Heading>
             <Body
-              size="xl"
               weight="normal"
-              className="text-gray-600 leading-relaxed max-w-xl"
+              className="text-gray-600 leading-relaxed max-w-xl text-[18px] md:text-[23px]"
             >
               Menjadi warisan berharga bagi pembudidaya ikan di seluruh
               Indonesia, dengan fokus pada metode bioflok yang ramah lingkungan,
               ekonomis, dan berkelanjutan.
             </Body>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4">
               <Link href="/course">
-                <div className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center">
+                <div className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center w-full">
                   <PlayCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   <Body size="lg" weight="semibold" className="text-white">
                     Mulai Belajar Sekarang
@@ -48,7 +47,7 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
                 </div>
               </Link>
             </div>
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               {impactStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <stat.icon className={`w-8 h-8 mx-auto mb-2 ${stat.color}`} />
@@ -62,13 +61,13 @@ const Hero = ({ impactStats }:{impactStats:impactStatsProps[]}) => {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl blur-3xl"></div>
             <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <img
                 src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
                 alt="Budidaya Ikan Bioflok"
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-cover "
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                 <Heading size="xs" className="text-white mb-1">
